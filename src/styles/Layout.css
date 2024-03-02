@@ -1,0 +1,14 @@
+/* Layout.css */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  margin-right: 15px;
+  font-size: 1.1rem;
+}
+
+.navbar {
+  border-bottom: 2px solid #ccc;
+}

@@ -1,0 +1,59 @@
+/* Monitor.css */
+body {
+  background-color: #0d1b2a; /* Dark blue background */
+  color: white; /* White text color for contrast */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+.monitor-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.monitor-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.monitor-links ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.monitor-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.monitor-links a {
+  color: #17a2b8; /* Bootstrap info color for links */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.monitor-links a:hover {
+  color: #0dcaf0; /* Lighter blue on hover */
+}
+
+.monitor-data-list ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+}
+
+.monitor-data-list li {
+  background-color: #12263a; /* Slightly lighter blue background for list items */
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.monitor-data-list p {
+  margin: 0;
+  color: #f8f9fa; /* Bootstrap white-ish color for text */
+}
+
+.monitor-data-list strong {
+  color: #ffc107; /* Bootstrap warning color for strong emphasis */
+}

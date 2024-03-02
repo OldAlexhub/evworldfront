@@ -1,0 +1,33 @@
+.cool-link {
+  display: inline-block;
+  background-color: #17a2b8;
+  color: #ffffff;
+  padding: 12px 25px;
+  margin: 5px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-shadow: "2px 2px 4px #000000";
+}
+
+.cool-link:hover,
+.cool-link:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: #138496;
+}
+
+.cool-link:not(:last-child) {
+  margin-right: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cool-link {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px 0; /* More space for touch devices */
+  }
+}
