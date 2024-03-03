@@ -133,8 +133,8 @@ const GraphOne = () => {
     >
       <div
         style={{
-          width: "60%", // Adjust this value to make the chart smaller or larger
-          height: "60%", // Adjust this value to control the chart's height
+          width: "90%", // Adjust this value to make the chart smaller or larger
+          height: "90%", // Adjust this value to control the chart's height
         }}
       >
         <Line data={chartData} options={chartOptions} />
