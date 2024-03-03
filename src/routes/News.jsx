@@ -8,23 +8,29 @@ const News = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const keywords =
-          "evs OR electric vehicles OR ev OR tesla OR rivian OR Lucid OR FISKER OR ev battery";
-        const api_key = process.env.REACT_APP_NEWS_API;
-        const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=${keywords}&apiKey=${api_key}`
-        );
+        const token = localStorage.getItem("token");
+        const response = await axios.get(process.env.REACT_APP_NEWS, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
-        if (response.status === 200) {
-          // Sort articles from newest to oldest
+        if (
+          response.status === 200 &&
+          response.data &&
+          Array.isArray(response.data.articles)
+        ) {
+          // Ensure the articles array is present and is an array
           const sortedArticles = response.data.articles.sort((a, b) => {
             return new Date(b.publishedAt) - new Date(a.publishedAt);
           });
 
           setData(sortedArticles);
+        } else {
+          console.error("Invalid response format:", response.data);
         }
       } catch (error) {
-        console.error(error);
+        console.error("Fetching data failed:", error);
       }
     };
 
@@ -69,7 +75,7 @@ const News = () => {
                   style={{ textShadow: "2px 2px 4px #000000" }}
                 >
                   <strong>Published:</strong>{" "}
-                  {new Date(article.publishedAt).toLocaleDateString()}-{" "}
+                  {new Date(article.publishedAt).toLocaleDateString()} -
                   {new Date(article.publishedAt).toLocaleTimeString()}
                 </p>
                 <p
@@ -96,3 +102,4 @@ const News = () => {
 };
 
 export default News;
+
