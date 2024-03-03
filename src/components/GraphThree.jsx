@@ -120,8 +120,8 @@ const GraphThree = () => {
     >
       <div
         style={{
-          width: "60%", // Adjust width as needed
-          height: "60%", // Adjust height as needed
+          width: "90%", // Adjust width as needed
+          height: "90%", // Adjust height as needed
         }}
       >
         <Line data={chartData} options={chartOptions} />
